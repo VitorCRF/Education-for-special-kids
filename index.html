@@ -12,12 +12,13 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-    <script type="text/javascript">
+    <script src="jquery.ui.touch-punch.min.js"></script>
 
-        var correctCards = 0;
+    <script type="text/javascript">
         $( document ).ready(function() {
-            $('.ui-draggable').draggable({containment: "parent"});
+            $('.ui-draggable').draggable();
         });
+        var correctCards = 0;
         $(init);
 
         function init() {
@@ -41,7 +42,7 @@
 
             for (var i = 0; i < 10; i++) {
                 $('<div>' + terms[i] + '</div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
-                    containment: "parent",
+
                     stack: '#cardPile div',
                     cursor: 'move',
                     revert: true
@@ -57,7 +58,6 @@
                     drop: handleCardDrop
                 });
             }
-
         }
 
         function handleCardDrop(event, ui) {
@@ -92,6 +92,7 @@
             }
         }
     </script>
+
 </head>
 
 <body>
