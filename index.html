@@ -15,6 +15,9 @@
     <script type="text/javascript">
 
         var correctCards = 0;
+        $( document ).ready(function() {
+            $('.ui-draggable').draggable({containment: "parent"});
+        });
         $(init);
 
         function init() {
