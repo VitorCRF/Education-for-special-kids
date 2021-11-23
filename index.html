@@ -15,9 +15,7 @@
     <script src="jquery.ui.touch-punch.min.js"></script>
 
     <script type="text/javascript">
-        $( document ).ready(function() {
-            $('.ui-draggable').draggable();
-        });
+        
         var correctCards = 0;
         $(init);
 
@@ -42,7 +40,7 @@
 
             for (var i = 0; i < 10; i++) {
                 $('<div>' + terms[i] + '</div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
-
+                    containment: "parent",
                     stack: '#cardPile div',
                     cursor: 'move',
                     revert: true
