@@ -14,13 +14,9 @@ function init() {
   // Reset the game
   correctCards = 0;
 
-
   // Create the pile of shuffled cards
   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   var terms = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-
-
-
 }
 
 function handleCardDrop(event, ui) {
@@ -75,7 +71,7 @@ function dragOver(e) {
 function dragDrop(e) {
   if (dragSrcEl.classList.contains('drag-item--prepend')) {
     this.prepend(dragSrcEl);
-  } else {
+  } else {  
     this.appendChild(dragSrcEl);
   }
   return false;
