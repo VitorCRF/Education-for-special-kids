@@ -13,30 +13,14 @@ function init() {
 
   // Reset the game
   correctCards = 0;
-  $('#cardPile').html('');
-  $('#cardSlots').html('');
+
 
   // Create the pile of shuffled cards
   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   var terms = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
-  for (var i = 0; i < 10; i++) {
-    $('<div>' + terms[i] + '</div>').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').draggable({
-      stack: '#cardPile div',
-      cursor: 'move',
-      revert: true
-    });
-  }
 
-  // Create the card slots
-  var words = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
-  for (var i = 1; i <= 10; i++) {
-    $('<div>' + words[i - 1] + '</div>').data('number', i).appendTo('#cardSlots').droppable({
-      accept: '#cardPile div',
-      hoverClass: 'hovered',
-      drop: handleCardDrop
-    });
-  }
+
 }
 
 function handleCardDrop(event, ui) {
