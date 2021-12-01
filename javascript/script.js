@@ -202,58 +202,58 @@ function touchEnd(e) {
       return false;
     } else {
       if(this.classList.contains('droppable-red')){
-        if(dragSrcEl.classList.contains('drag-item--red')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--red')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-blue')){
-        if(dragSrcEl.classList.contains('drag-item--blue')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--blue')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-green')){
-        if(dragSrcEl.classList.contains('drag-item--green')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--green')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-black')){
-        if(dragSrcEl.classList.contains('drag-item--black')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--black')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-white')){
-        if(dragSrcEl.classList.contains('drag-item--white')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--white')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-yellow')){
-        if(dragSrcEl.classList.contains('drag-item--yellow')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--yellow')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-brown')){
-        if(dragSrcEl.classList.contains('drag-item--brown')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--brown')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-purple')){
-        if(dragSrcEl.classList.contains('drag-item--purple')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--purple')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-pink')){
-        if(dragSrcEl.classList.contains('drag-item--pink')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--pink')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-orange')){
-        if(dragSrcEl.classList.contains('drag-item--orange')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--orange')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }else if(this.classList.contains('droppable-yellow')){
-        if(dragSrcEl.classList.contains('drag-item--yellow')){
-          this.appendChild(dragSrcEl);
+        if(touchEl.classList.contains('drag-item--yellow')){
+          this.appendChild(touchEl);
           correctCards++;
         }
       }
@@ -263,6 +263,11 @@ function touchEnd(e) {
           'Você conseguiu concluir o nível 1!',
           'success'
         )
+      }
+      if (touchEl.classList.contains('drag-item--prepend')) {
+        target.prepend(touchEl);
+      } else {
+        target.appendChild(touchEl);
       }
     }
   });
