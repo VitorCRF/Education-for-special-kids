@@ -40,14 +40,11 @@ function handleCardDrop(event, ui) {
   // and reset the cards for another go
 
   if (correctCards == 2) {
-    $('#successMessage').show();
-    $('#successMessage').animate({
-      left: '380px',
-      top: '200px',
-      width: '400px',
-      height: '100px',
-      opacity: 1
-    });
+    Swal.fire(
+      'Parabéns!',
+      'Você conseguiu.',
+      'success'
+    )
   }
 }
 function dragStart(e) {
@@ -125,15 +122,12 @@ function dragDrop(e) {
       correctCards++;
     }
   }
-  if (correctCards == 2) {
-    $('#successMessage').show();
-    $('#successMessage').animate({
-      left: '380px',
-      top: '200px',
-      width: '400px',
-      height: '100px',
-      opacity: 1
-    });
+  if (correctCards == 20) {
+    swal(
+      'Parabéns',
+      'Você conseguiu concluir o nível 1!',
+      'success'
+    )
   }
   return false;
 }
