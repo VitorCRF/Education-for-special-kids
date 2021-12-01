@@ -201,10 +201,61 @@ function touchEnd(e) {
     if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
       return false;
     } else {
-      if (touchEl.classList.contains('drag-item--prepend')) {
-        target.prepend(touchEl);
-      } else {
-        target.appendChild(touchEl);
+      if (target.classList.contains('droppable-red')){
+        if(touchEl.classList.contains('drag-item--red')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-blue')){
+        if(touchEl.classList.contains('drag-item--blue')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-green')){
+        if(touchEl.classList.contains('drag-item--green')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-black')){
+        if(touchEl.classList.contains('drag-item--black')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-white')){
+        if(touchEl.classList.contains('drag-item--white')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-yellow')){
+        if(touchEl.classList.contains('drag-item--yellow')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-brown')){
+        if(touchEl.classList.contains('drag-item--brown')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-purple')){
+        if(touchEl.classList.contains('drag-item--purple')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-pink')){
+        if(touchEl.classList.contains('drag-item--pink')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-orange')){
+        if(touchEl.classList.contains('drag-item--orange')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
+      }else if(target.classList.contains('droppable-yellow')){
+        if(touchEl.classList.contains('drag-item--yellow')){
+          target.appendChild(touchEl);
+          correctCards++;
+        }
       }
       if (correctCards == 20) {
         swal(
