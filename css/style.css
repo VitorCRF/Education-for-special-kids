@@ -3,8 +3,10 @@
 body {
     margin: 30px;
     font-family: "Georgia", serif;
+    font-weight: 600 !important;
     line-height: 1.8em;
     color: #333;
+    background-color: rgb(231, 231, 231) !important;
   }
    
   /* Give headings their own font */
@@ -60,7 +62,7 @@ body {
    
   #cardSlots {
     margin: 0 auto 3em auto;
-    background: rgb(228, 231, 228);
+    background: #c4ffc4;
     float: right;
   }
   .droppable-red{
@@ -102,7 +104,7 @@ body {
    
   #cardPile {
     margin: 0 auto;
-    background: rgb(228, 231, 228);
+    background: #c4ffc4;
     float: left;
   }
    
@@ -121,7 +123,7 @@ body {
    
   /* Individual cards and slots */
    
-  #cardSlots div, #cardPile div {
+  #cardSlots div{
     width: 91%;
     height: 18%;
     padding: .85em;
@@ -132,7 +134,24 @@ body {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     margin: 10px 0 0 10px;
-    background: #fff;
+    background: rgb(231 231 231);
+  }
+  #cardSlots div div{
+    justify-content: center;
+    align-items: center;
+  }
+  #cardPile div {
+    width: 11%;
+    height: 28%;
+    padding: .85em;
+    padding-top: 40px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 10px 0 0 10px;
+    background: rgb(231 231 231);
   }
    
   /*#cardSlots div:first-child, #cardPile div:first-child {

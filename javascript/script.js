@@ -39,7 +39,7 @@ function handleCardDrop(event, ui) {
   // If all the cards have been placed correctly then display a message
   // and reset the cards for another go
 
-  if (correctCards == 10) {
+  if (correctCards == 2) {
     $('#successMessage').show();
     $('#successMessage').animate({
       left: '380px',
@@ -69,10 +69,71 @@ function dragOver(e) {
 }
 
 function dragDrop(e) {
-  if (dragSrcEl.classList.contains('drag-item--prepend')) {
-    this.prepend(dragSrcEl);
-  } else {  
-    this.appendChild(dragSrcEl);
+  if(this.classList.contains('droppable-red')){
+    if(dragSrcEl.classList.contains('drag-item--red')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-blue')){
+    if(dragSrcEl.classList.contains('drag-item--blue')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-green')){
+    if(dragSrcEl.classList.contains('drag-item--green')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-black')){
+    if(dragSrcEl.classList.contains('drag-item--black')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-white')){
+    if(dragSrcEl.classList.contains('drag-item--white')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-yellow')){
+    if(dragSrcEl.classList.contains('drag-item--yellow')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-brown')){
+    if(dragSrcEl.classList.contains('drag-item--brown')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-purple')){
+    if(dragSrcEl.classList.contains('drag-item--purple')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-pink')){
+    if(dragSrcEl.classList.contains('drag-item--pink')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-orange')){
+    if(dragSrcEl.classList.contains('drag-item--orange')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }else if(this.classList.contains('droppable-yellow')){
+    if(dragSrcEl.classList.contains('drag-item--yellow')){
+      this.appendChild(dragSrcEl);
+      correctCards++;
+    }
+  }
+  if (correctCards == 2) {
+    $('#successMessage').show();
+    $('#successMessage').animate({
+      left: '380px',
+      top: '200px',
+      width: '400px',
+      height: '100px',
+      opacity: 1
+    });
   }
   return false;
 }
