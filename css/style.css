@@ -6,7 +6,7 @@ body {
     font-weight: 600 !important;
     line-height: 1.8em;
     color: #333;
-    background-color: rgb(231, 231, 231) !important;
+    background-color: #c4ffc4 !important;
   }
    
   /* Give headings their own font */
@@ -18,27 +18,12 @@ body {
   /* Main content area */
    
   #content {
-    margin: 80px 70px;
     text-align: center;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
   }
-   .colar{
-    border-style: dashed !important;
-    width: 91% !important;
-    height: 18% !important;
-    padding: 0.85em;
-    padding-top: 40px;
-    padding-bottom: 0;
-    border: 2px solid #333;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    margin: 10px 0 0 10px;
-    background: #fff;
-    display: block !important;
-   }
+
    
   /* Header/footer boxes */
    
@@ -48,7 +33,6 @@ body {
     margin: 70px;
     padding: 10px;
     background: #ebedf2;
-    border: 1px solid #333;
   }
    
   .wideBox h1 {
@@ -61,8 +45,6 @@ body {
   /* Slots for final card positions */
    
   #cardSlots {
-    margin: 0 auto 3em auto;
-    background: #c4ffc4;
     float: right;
   }
   .droppable-red{
@@ -99,38 +81,28 @@ body {
 
   .drag-item{
     border: none !important;
-    z-index: 1000 !important;
-    margin-bottom: 8px !important;
-    width: 100%; height: 25px;
-    transition: box-shadow ease-out 350ms;
   }
   /* The initial pile of unsorted cards */
    
-  #cardPile {
-    margin: 0 auto;
-    background: #c4ffc4;
-    float: left;
-  }
+
    
   #cardSlots, #cardPile {
     width: 10%;
     height: 80%;
     padding: .85em;
-    border: 2px solid #333;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    border: 0px !important;
+    background: transparent;
+
   }
    
   /* Individual cards and slots */
-
+  .drag-item{
+    z-index: 1000;
+  }
   #cardSlots div{
     width: 91%;
     height: 18%;
-    padding: 14.85em;
+    padding: .85em;
     padding-top: 40px;
     padding-bottom: 0;
     border: 2px solid #333;
@@ -234,6 +206,11 @@ body {
     display: inline-block;
     padding: 10px;
     border: 1px solid black;
+  }
+  
+  .drag-item {
+    width: 100%; height: 25px;
+    transition: box-shadow ease-out 350ms;
   }
   
   .drag-item--touchmove {
