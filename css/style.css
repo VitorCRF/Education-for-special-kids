@@ -122,11 +122,14 @@ body {
   }
    
   /* Individual cards and slots */
-   
+  .drag-item{
+    z-index: 1000 !important;
+    margin-bottom: 8px !important;
+  }
   #cardSlots div{
     width: 91%;
     height: 18%;
-    padding: .85em;
+    padding: 14.85em;
     padding-top: 40px;
     padding-bottom: 0;
     border: 2px solid #333;
@@ -140,6 +143,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   #cardPile div {
     width: 91%;
     height: 28%;
