@@ -1,28 +1,111 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-    <title>A jQuery Drag-and-Drop Number Cards Game</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Cores Interativas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://logodix.com/logo/388954.png" />
 </head>
 <body>
-    <div id="content" class="d-flex justify-content-center">
-        <div id="cardPile" class="row col-md-6 d-flex justify-content-center"> </div>
-        <div id="cardSlots" class="row col-md-6 d-flex justify-content-center"> </div>
+<!-- partial:index.partial.html -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-        <div id="successMessage">
-            <h2>Parabéns, você conseguiu!</h2>
-            <button onclick="init()">Jogar novamente.</button>
+<nav class="navbar navbar-dark navbar-expand-sm ">
+        <div class="container">
+        <a href="#" class="navbar-brand">
+        <i class="fas fa-blog"></i> &nbsp;
+        Cores Interativas
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                <a href='#footer' class="nav-link active">
+                    Contato
+                </a>
+            </li>
+            
+        </ul>
         </div>
     </div>
-    <script  src="javascript/index.js"></script>
-</body>
+  </nav>
+  <div id="content" class="d-flex justify-content-center">
+    <div class="drag-container row col-md-6 d-flex justify-content-center" id="cardPile">
+      <div class="drag-item drag-item--red ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--brown ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--black ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--purple ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--orange ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--yellow ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--blue ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--white ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--purple ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--black ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--green ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--orange ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--red ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--yellow ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--pink ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--orange ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--blue ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--pink ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--green ui-draggable" draggable="true"></div>
+      <div class="drag-item drag-item--white ui-draggable" draggable="true"></div>
+    </div>
+    <div class="row col-md-6 d-flex justify-content-center" id="cardSlots">
+      <div class="drag-container ui-droppable droppable-red">Vermelho</div>
+      <div class="drag-container ui-droppable droppable-blue">Azul</div>
+      <div class="drag-container ui-droppable droppable-yellow">Amarelo</div>
+      <div class="drag-container ui-droppable droppable-black">Preto</div>
+      <div class="drag-container ui-droppable droppable-white">Branco</div>
+      <div class="drag-container ui-droppable droppable-green">Verde</div>
+      <div class="drag-container ui-droppable droppable-pink">Rosa</div>
+      <div class="drag-container ui-droppable droppable-orange">Laranjado</div>
+      <div class="drag-container ui-droppable droppable-purple">Roxo</div>
+      <div class="drag-container ui-droppable droppable-brown">Marrom</div>
+    </div>
+  </div>
+  
+  <div id="successMessage">
+    <h2>Parabéns, você conseguiu!</h2>
+    <button onclick="init()">Jogar novamente.</button>
+  </div>
 
+  <footer class="footer" id="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/vitor-felix-de-araujo/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/felixx_vitor/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/VitorCRF/Education-for-special-kids" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a></li>
+    </ul>
+    <p>&copy;2021 Vitor Felix de Araujo | All Rights Reserved</p>
+  </footer>
+
+    <script src="javascript/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- partial -->
+</body>
 </html>
