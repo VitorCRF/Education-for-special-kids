@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Drag and Drop - Mobile v1</title>
+  <title>Cores Interativas</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,17 +13,18 @@
   <!-- SweetAlert2 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="https://logodix.com/logo/388954.png" />
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<nav class="navbar navbar-dark navbar-expand-sm bg-dark ">
+<nav class="navbar navbar-dark navbar-expand-sm ">
         <div class="container">
         <a href="/" class="navbar-brand">
         <i class="fas fa-blog"></i> &nbsp;
-        Blog Template
+        Mini Games
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -33,22 +34,17 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a href="" class="nav-link active">
-                    Home
+                    Início
                 </a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link active">
-                    Blog
+                    Contato
                 </a>
             </li>
             <li class="nav-item">
                 <a href="" class="nav-link active">
-                    About
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="" class="nav-link active">
-                    Contact
+                    Sobre
                 </a>
             </li>
         </ul>
@@ -91,12 +87,30 @@
       <div class="drag-container ui-droppable droppable-brown">Marrom</div>
     </div>
   </div>
+  
   <div id="successMessage">
     <h2>Parabéns, você conseguiu!</h2>
     <button onclick="init()">Jogar novamente.</button>
   </div>
-    <script src="javascript/script.js"></script>
 
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/vitor-felix-de-araujo/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/felixx_vitor/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/VitorCRF/Education-for-special-kids" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a></li>
+    </ul>
+    <p>&copy;2021 Vitor Felix de Araujo | All Rights Reserved</p>
+  </footer>
+
+    <script src="javascript/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
