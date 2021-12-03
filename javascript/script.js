@@ -1,15 +1,9 @@
 var correctCards = 0;
 $(init);
-
 function init() {
   // Hide the success message
-  $('#successMessage').hide();
-  $('#successMessage').css({
-    left: '580px',
-    top: '250px',
-    width: 0,
-    height: 0
-  });
+  $('#playAgain').hide();
+  
 
   // Reset the game
   correctCards = 0;
@@ -17,35 +11,6 @@ function init() {
   // Create the pile of shuffled cards
   var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   var terms = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-}
-
-function handleCardDrop(event, ui) {
-  var slotNumber = $(this).data('number');
-  var cardNumber = ui.draggable.data('number');
-
-  // If the card was dropped to the correct slot,
-  // change the card colour, position it directly
-  // on top of the slot, and prevent it being dragged
-  // again
-
-  if (slotNumber == cardNumber) {
-    ui.draggable.addClass('correct');
-    $(this).droppable('disable');
-    ui.draggable.position({ of: $(this), my: 'left top', at: 'left top' });
-    ui.draggable.draggable('option', 'revert', false);
-    correctCards++;
-  }
-
-  // If all the cards have been placed correctly then display a message
-  // and reset the cards for another go
-
-  if (correctCards == 2) {
-    Swal.fire(
-      'Parabéns!',
-      'Você conseguiu.',
-      'success'
-    )
-  }
 }
 function dragStart(e) {
   dragSrcEl = this;
@@ -125,9 +90,12 @@ function dragDrop(e) {
   if (correctCards == 20) {
     swal(
       'Parabéns',
-      'Você conseguiu concluir o nível 1!',
+      'Você conseguiu concluir o desafio!',
       'success'
-    )
+    ).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      $('#playAgain').show();
+    })
   }
   return false;
 }
@@ -260,7 +228,7 @@ function touchEnd(e) {
       if (correctCards == 20) {
         swal(
           'Parabéns',
-          'Você conseguiu concluir o nível 1!',
+          'Você conseguiu concluir o desafio!',
           'success'
         )
       }

@@ -26,25 +26,25 @@
         <i class="fas fa-blog"></i> &nbsp;
         Cores Interativas
         </a>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-            
             <li class="nav-item">
                 <a href='#footer' class="nav-link active">
                     Contato
                 </a>
             </li>
-            
         </ul>
         </div>
     </div>
   </nav>
   <div id="content" class="d-flex justify-content-center">
     <div class="drag-container row col-md-6 d-flex justify-content-center" id="cardPile">
+      <div class="drag-item d-grid gap-2 col-6 mx-auto" style="background-color: transparent;" id="playAgain">
+        <button class="btn btn-primary btn-lg" type="button" onClick="window.location.reload();">Jogar novamente</button>
+      </div>
       <div class="drag-item drag-item--red ui-draggable" draggable="true"></div>
       <div class="drag-item drag-item--brown ui-draggable" draggable="true"></div>
       <div class="drag-item drag-item--black ui-draggable" draggable="true"></div>
@@ -78,11 +78,6 @@
       <div class="drag-container ui-droppable droppable-purple">Roxo</div>
       <div class="drag-container ui-droppable droppable-brown">Marrom</div>
     </div>
-  </div>
-  
-  <div id="successMessage">
-    <h2>Parabéns, você conseguiu!</h2>
-    <button onclick="init()">Jogar novamente.</button>
   </div>
 
   <footer class="footer" id="footer">
