@@ -1,4 +1,4 @@
-# Education-for-special-kids
+# Desafio de separar cores
 
 Projeto criado com o objetivo de auxiliar crianças autistas no aprendizado das cores.
 
